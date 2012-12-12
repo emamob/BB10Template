@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <title>BB10 Template</title>
+        <link href="favicon.ico" rel="icon" type="image/x-icon">
+        <link href="css/app.css" rel="stylesheet">
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <section id="appMenu" class="appMenu slideDown">
+            <div class="appMenuBar">
+                <div class="appMenuButton" onclick="app.update('Settings');">Settings</div>
+                <div class="appMenuButton" onclick="app.update('Help');">Help</div>
+            </div>
+        </section>
+
+        <section id="sidebarMenu" class="sidebarMenu slideRight">
+            <ul>
+                <li onclick="app.update('Tab 1');">Tab 1</li>
+                <li onclick="app.update('Tab 2');">Tab 2</li>
+                <li onclick="app.update('Tab 3');">Tab 3</li>
+            </ul>
+        </section>
+
+        <section id="main" class="main">
+            <section class="content">
+                <h1 id="heading">BB10 Template</h1>
+                <div><input type="button" value="Toggle Application Menu" onclick="app.toggle();"></div>
+            </section>
+
+            <div class="actionBar">
+                <div id="actionSidebar" class="actionButton actionBack">|||</div>
+                <div class="actionBarScroller">
+                    <div class="actionButton actionSelected" onclick="app.update('Item 1');">Item 1</div>
+                    <div class="actionButton" onclick="app.update('Item 2');">Item 2</div>
+                    <div class="actionButton" onclick="app.update('Item 3');">Longer Item 3</div>
+                </div>
+                <div id="actionMore" class="actionButton actionMore">...</div>
+            </div>
+
+            <div id="actionMenu" class="actionMenu slideLeft">
+                <ul>
+                    <li onclick="app.update('Action 1');">Action 1</li>
+                    <li onclick="app.update('Action 2');">Action 2</li>
+                </ul>
+            </div>
+        </section>
+
+        <script src="local:///chrome/webworks.js"></script>
+        <script src="js/api.js"></script>
+        <script src="js/app.js"></script>
+        <script type="text/javascript">
+        // add load events
+        if (navigator.userAgent.match(/BB10/)) {
+            window.addEventListener('load', function(e) {
+                document.addEventListener('webworksready', app.init);
+            }, false);
+        }
+        else {
+            window.addEventListener('load', app.init);
+        }
+        </script>
+    </body>
+</html>

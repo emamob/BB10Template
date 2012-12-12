@@ -1,0 +1,244 @@
+/* ===========================================================================
+ * app.css
+ *
+ * @description
+ *
+ *
+ * @author Jim Ing (jing@rim.com)
+ * ===========================================================================
+ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+a:hover {
+    color: #FF0000;
+}
+
+img {
+    border: 0;
+}
+
+header {
+	background-color: #273635;
+	color: #FFFFFF;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.content {
+	margin: 10px;
+}
+
+.appMenu {
+	background-color: #111111;
+	color: #FFF;
+	display: none;
+	height: 14mm;
+	padding: 2mm;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.appMenuBar {
+	background-color: #353535;
+	bottom: 0;
+	color: #FFFFFF;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.appMenuButton {
+	border-right: 1px solid #000000;
+	border-bottom: 3px solid #3C3C3C;
+	float: left;
+	height: 14mm;
+	line-height: 14mm;
+	text-align: center;
+	vertical-align: middle;
+	min-width: 14mm;
+	padding: 2mm;
+}
+
+.appMenuButton:active, .appMenuButton:hover {
+	border-bottom: 3px solid #00A8DF;
+}
+
+.actionBar {
+	background-color: #353535;
+	bottom: 0;
+	color: #FFFFFF;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+
+.actionBarScroller {
+	/*overflow: auto;*/
+	/*overflow-y: hidden;*/
+}
+
+.actionButton {
+	border-right: 1px solid #000000;
+	border-top: 3px solid #3C3C3C;
+	float: left;
+	height: 14mm;
+	line-height: 14mm;
+	text-align: center;
+	vertical-align: middle;
+	min-width: 14mm;
+	padding: 2mm;
+}
+
+.actionButton:active, .actionButton:hover {
+	border-top: 3px solid #00A8DF;
+}
+
+.actionSelected {
+	background-color: #3C3C3C;
+	border-top: 3px solid #00A8DF;
+}
+
+.actionMore {
+	border-left: 1px solid #000000;
+	box-shadow: 0 1px 5px #000000;
+	position: absolute;
+	right: 0;
+}
+
+.actionMenu {
+	background-color: #111111;
+	color: #FFF;
+	display: none;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 75%;
+	z-index: 120;
+}
+
+.actionMenu ul {
+	list-style: none;
+	margin: 2%;
+	padding: 0;
+	text-align: left;
+	width: 96%;
+}
+
+.actionMenu li {
+	border-bottom: 1px solid #292929;
+	color: #DBDBDB;
+	font-size: 125%;
+	margin: 0;
+	padding: 10px;
+}
+
+.actionMenu li:active, .actionMenu li:hover {
+	border: 1px solid #00A8DF;
+}
+
+.sidebarMenu {
+	background-color: #111111;
+	/*background-color: rgba(17, 17, 17, 0.8);*/
+	color: #FFF;
+	display: none;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 75%;
+	z-index: 110;
+}
+
+.sidebarMenu ul {
+	list-style: none;
+	margin: 2%;
+	padding: 0;
+	text-align: left;
+	width: 96%;
+}
+
+.sidebarMenu li {
+	border-bottom: 1px solid #292929;
+	color: #DBDBDB;
+	font-size: 125%;
+	margin: 0;
+	padding: 10px;
+}
+
+.sidebarMenu li:active, .sidebarMenu li:hover {
+	border: 1px solid #00A8DF;
+}
+
+.main {
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@-webkit-keyframes slideLeft {
+	0% {
+		-webkit-transform: translateX(563px);
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+	}
+}
+
+.slideLeft {
+	-webkit-animation-name: slideLeft;
+	-webkit-animation-duration: 500ms;
+	-webkit-animation-timing-function: ease;
+}
+
+/*
+@-webkit-keyframes slideRight {
+	0% {
+		-webkit-transform: translateX(-563px);
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+	}
+}
+
+.slideRight {
+	-webkit-animation-name: slideRight;
+	-webkit-animation-duration: 500ms;
+	-webkit-animation-timing-function: ease;
+}
+*/
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100px);
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+	}
+}
+
+.slideDown {
+	-webkit-animation-name: slideDown;
+	-webkit-animation-duration: 500ms;
+	-webkit-animation-timing-function: ease;
+}
+
+/* BB10 */
+
+@media (min-height: 720px) and (max-height: 768px) {
+	body {
+		font-size: 160%;
+	}
+}

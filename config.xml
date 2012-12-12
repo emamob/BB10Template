@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" xml:lang="en"
+    id="BB10Template" version="1.0.0">
+
+    <name>BB10 Template</name>
+
+    <description>
+        This is a template for BB10 WebWorks apps.
+    </description>
+
+    <author href="http://www.rim.com/" email="jing@rim.com"
+        rim:copyright="Copyright 2011-2012 Research In Motion Limited">Jim Ing</author>
+
+    <rim:category name="all" />
+
+    <content src="index.html" />
+
+    <icon src="img/icon-86.png" />
+    <icon src="img/icon-150.png" />
+
+    <!-- BB and PB -->
+    <rim:loadingScreen backgroundColor="#000000" foregroundImage="img/logo.png"
+        onFirstLaunch="true" onLocalPageLoad="false" onRemotePageLoad="false">
+    </rim:loadingScreen>
+
+    <!-- BB10 -->
+    <rim:splash src="img/splash-1280x768.png" />
+    <rim:splash src="img/splash-768x1280.png" />
+
+    <!-- BB and PB -->
+    <rim:orientation mode="portrait" />
+
+    <!-- BB10 -->
+    <feature id="blackberry.app.orientation">
+        <param name="mode" value="portrait"></param>
+    </feature>
+
+    <access uri="*" subdomains="true">
+    </access>
+
+    <rim:permissions>
+        <rim:permit>access_shared</rim:permit>
+        <rim:permit>read_geolocation</rim:permit>
+        <rim:permit>read_device_identifying_information</rim:permit>
+    </rim:permissions>
+
+    <feature id="blackberry.app" />
+    <feature id="blackberry.app.event" />
+    <feature id="blackberry.system" />
+    <feature id="blackberry.system.event" />
+    <feature id="blackberry.ui.dialog" />
+    <feature id="blackberry.ui.menu" />
+    <feature id="blackberry.utils" />
+</widget>
