@@ -100,6 +100,7 @@ header {
 }
 
 .actionButton:active, .actionButton:hover {
+	background-color: #3C3C3C;
 	border-top: 3px solid #00A8DF;
 }
 
@@ -109,8 +110,8 @@ header {
 }
 
 .actionMore {
-	border-left: 1px solid #000000;
-	box-shadow: 0 1px 5px #000000;
+	/*border-left: 1px solid #000000;*/
+	/*box-shadow: 0 1px 5px #000000;*/
 	position: absolute;
 	right: 0;
 }
@@ -141,6 +142,11 @@ header {
 	font-size: 125%;
 	margin: 0;
 	padding: 10px;
+}
+
+.actionBarScroller .actionButton:last-child {
+	/*color: #F00;*/
+	box-shadow: 9px 3px 5px rgba(50, 50, 50, 0.5);
 }
 
 .actionMenu li:active, .actionMenu li:hover {

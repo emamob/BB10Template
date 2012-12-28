@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" xml:lang="en"
-    id="BB10Template" version="1.0.0">
+    id="BB10Template" version="1.0.2">
 
     <name>BB10 Template</name>
 
@@ -28,11 +28,11 @@
     <rim:splash src="img/splash-768x1280.png" />
 
     <!-- BB and PB -->
-    <rim:orientation mode="portrait" />
+    <rim:orientation mode="auto" />
 
     <!-- BB10 -->
     <feature id="blackberry.app.orientation">
-        <param name="mode" value="portrait"></param>
+        <param name="mode" value="auto"></param>
     </feature>
 
     <access uri="*" subdomains="true">
