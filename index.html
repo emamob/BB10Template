@@ -1,5 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+    Copyright 2012-2013 Research In Motion Limited.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -11,42 +26,91 @@
         </style>
     </head>
     <body>
+        <!-- Application Menu -->
         <section id="appMenu" class="appMenu slideDown">
             <div class="appMenuBar">
-                <div class="appMenuButton" onclick="app.update('Settings');">Settings</div>
-                <div class="appMenuButton" onclick="app.update('Help');">Help</div>
+                <div class="appMenuButton" data-name="settings">Settings</div>
+                <div class="appMenuButton" data-name="help">Help</div>
             </div>
         </section>
 
+        <!-- Sidebar Menu -->
         <section id="sidebarMenu" class="sidebarMenu slideRight">
             <ul>
-                <li onclick="app.update('Tab 1');">Tab 1</li>
-                <li onclick="app.update('Tab 2');">Tab 2</li>
-                <li onclick="app.update('Tab 3');">Tab 3</li>
+                <li data-name="tab1">Tab 1</li>
+                <li data-name="tab2">Tab 2</li>
+                <li data-name="tab3">Tab 3</li>
+                <li data-name="tab4">Tab 4</li>
+                <li data-name="tab5">Tab 5</li>
+                <li data-name="tab6">Tab 6</li>
+                <li data-name="tab7">Tab 7</li>
+                <li data-name="tab8">Tab 8</li>
+                <li data-name="tab9">Tab 9</li>
+                <li data-name="tab10">Tab 10</li>
+                <li data-name="tab11">Tab 11</li>
+                <li data-name="tab12">Tab 12</li>
+                <li data-name="tab13">Tab 13</li>
+                <li data-name="tab14">Tab 14</li>
+                <li data-name="tab15">Tab 15</li>
             </ul>
         </section>
 
         <section id="main" class="main">
+            <!-- Main Content -->
             <section class="content">
-                <h1 id="heading">BB10 Template</h1>
-                <div><input type="button" value="Toggle Application Menu" onclick="app.toggle();"></div>
+                        <h1 id="heading">BB10 Template</h1>
+                        <div><input type="button" value="Toggle Application Menu" onclick="app.toggle();"></div>
+                        <p><a href="http://www.lipsum.com/">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Etiam suscipit eros et felis aliquam posuere tempor ligula venenatis. Cras dictum mauris est. Curabitur cursus porttitor luctus. Curabitur sagittis convallis urna at elementum. Etiam sodales vulputate elit ac ullamcorper. Ut mollis quam eu ante elementum ut lacinia enim ultrices. In viverra sagittis mi tempor blandit.</p>
+                        <p>Praesent id ipsum libero. Quisque lorem felis, mollis non sodales a, venenatis non quam. Integer neque leo, dignissim et tristique gravida, bibendum scelerisque orci. Vestibulum in odio sit amet ligula tempor convallis quis vitae enim. Aliquam in libero sed diam malesuada accumsan. Vestibulum tincidunt lacinia suscipit. Sed ornare ante vel enim auctor et facilisis sem pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec nunc orci, accumsan id eleifend eu, viverra in elit. Pellentesque id eleifend eros. Vestibulum non eros metus, in vestibulum mauris.</p>
+                        <p>Praesent fringilla odio et felis faucibus feugiat. Praesent facilisis leo vel tortor volutpat hendrerit lacinia turpis tincidunt. Praesent ipsum neque, tincidunt a pulvinar sit amet, scelerisque quis magna. Proin ut congue turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam rhoncus venenatis dui, eu iaculis lectus elementum ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas aliquam sapien a arcu dictum ultricies. Etiam accumsan blandit viverra. Aenean sit amet leo a diam pretium blandit.</p>
+                        <p>Nulla facilisi. Etiam tempor quam ut nisl porttitor viverra. Pellentesque viverra pellentesque ipsum, eget convallis orci dictum eget. Nunc et nunc lorem, sed commodo massa. Nullam ut neque ante, sed faucibus nunc. Sed mollis commodo lobortis. Proin tempor dui ut augue aliquam elementum. Maecenas ultrices felis tellus. Mauris mattis pellentesque felis, in varius nulla laoreet vel.</p>
+                        <p>Nunc eleifend, nulla eget eleifend consectetur, dui neque luctus sem, eu elementum elit massa a quam. Phasellus nec est eget diam imperdiet volutpat eget at velit. Phasellus dapibus blandit congue. Curabitur sem risus, laoreet et posuere quis, egestas non elit. Integer tortor tellus, ultricies porttitor pharetra consectetur, cursus eget magna. Nulla facilisi. Donec bibendum dapibus lectus, at dignissim tellus hendrerit vitae. Sed fermentum arcu in metus mattis semper. Sed sed orci laoreet ligula vestibulum tempus. Etiam luctus, odio vitae bibendum molestie, ligula risus porttitor diam, non accumsan mauris nibh non risus. Praesent vitae augue metus.</p>
+                        <p>Sed ornare, metus a fermentum tempor, orci erat lobortis mauris, imperdiet tincidunt metus est sed lacus. Curabitur elit odio, vestibulum sit amet viverra vitae, rutrum sit amet arcu. Praesent scelerisque rhoncus mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus id ipsum turpis. Fusce vel justo nec justo adipiscing pellentesque. Morbi aliquet, elit quis viverra venenatis, lorem felis molestie dui, sed commodo mauris velit sit amet libero. Quisque in sem at est tempor hendrerit ac quis mi. Nunc commodo, diam sed lacinia elementum, risus sapien vehicula turpis, ut elementum mauris enim quis sem. Integer lectus purus, tempor vel ultricies ac, gravida sit amet tellus. Cras sem justo, feugiat tempus convallis nec, pellentesque et erat. Praesent augue orci, consectetur eu elementum ut, ullamcorper et nisl. Integer vitae mollis velit.</p>
+                        <p>Aenean eget accumsan enim. Etiam mi elit, tristique nec molestie ac, lobortis et velit. Cras eu vehicula leo. Pellentesque et metus velit, ut dictum tortor. Morbi nec tellus orci, at aliquam sapien. Vestibulum sagittis felis id diam viverra mattis. In hendrerit tempus gravida. Maecenas ac quam nisi, non ullamcorper massa. Nunc sit amet dolor lacus, eget vestibulum velit. Praesent consectetur nibh vel dolor tincidunt nec faucibus orci facilisis.</p>
+                        <p>Maecenas ut justo id diam posuere hendrerit at eget urna. Vestibulum in eros est, vitae mattis velit. Nullam a mauris metus, quis accumsan nulla. Morbi convallis semper tortor, a ultrices odio feugiat aliquam. Ut laoreet justo non turpis lacinia vel eleifend mi mattis. Nulla facilisi. Nunc interdum bibendum urna non dictum. Mauris vel lectus enim, non blandit orci.</p>
+                        <p>Sed sed mauris orci. Nullam vulputate, dui vel aliquam cursus, eros ligula convallis risus, eu vestibulum nulla libero quis lectus. Vivamus odio ligula, pharetra nec consequat et, mattis id magna. Mauris augue urna, pellentesque ac scelerisque in, dapibus nec felis. Phasellus ac malesuada libero. Pellentesque purus sapien, dictum in rutrum id, convallis nec urna. Morbi quis elementum ante.</p>
+                        <p>Suspendisse tempus justo in nunc sodales convallis. Vivamus sit amet ante a nisl interdum fermentum sed eget erat. Etiam laoreet volutpat aliquet. Sed suscipit, mi a suscipit fringilla, arcu nulla condimentum lacus, ac congue orci neque pulvinar lacus. Suspendisse aliquam leo sit amet neque adipiscing faucibus non eleifend lectus. Donec sed enim mauris. Pellentesque sed libero et nibh luctus semper et vel tellus. Mauris dictum justo eu tortor gravida sit amet aliquam neque pharetra. Suspendisse potenti. Integer quis molestie risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie tristique nunc sed suscipit. In diam tellus, auctor quis aliquet sed, gravida sed metus. Donec vitae fringilla mi. Integer at nisi elit.</p>
             </section>
 
+            <!-- Action Bar -->
             <div class="actionBar">
-                <div id="actionSidebar" class="actionButton actionBack">|||</div>
+                <div id="actionSidebar" class="actionButton actionButtonOverflow">&nbsp;</div>
                 <div class="actionBarScroller">
-                    <div class="actionButton" onclick="app.update('Item 1');">Item 1</div>
-                    <div class="actionButton" onclick="app.update('Item 2');">Item 2</div>
-                    <div class="actionButton" onclick="app.update('Item 3');">Item 3</div>
+                    <div id="actionButtons" class="actionBarScrollerContainer">
+                        <div class="actionButton" data-name="item1">Item 1</div>
+                        <div class="actionButton" data-name="item2">Item 2</div>
+                        <div class="actionButton" data-name="item3">Item 3</div>
+                        <div class="actionButton" data-name="item4">Item 4</div>
+                        <div class="actionButton" data-name="item5">Item 5</div>
+                        <div class="actionButton" data-name="item6">Item 6</div>
+                        <div class="actionButton" data-name="item7">Item 7</div>
+                        <div class="actionButton" data-name="item8">Item 8</div>
+                        <div class="actionButton" data-name="item9">Item 9</div>
+                        <div class="actionButton" data-name="item10">Item 10</div>
+                    </div>
                 </div>
-                <div id="actionMore" class="actionButton actionMore">...</div>
+                <div id="actionMore" class="actionButton actionMore">&nbsp;</div>
             </div>
 
+            <!-- Action Menu -->
             <div id="actionMenu" class="actionMenu slideLeft">
                 <ul>
-                    <li onclick="app.update('Action 1');">Action 1</li>
-                    <li onclick="app.update('Action 2');">Action 2</li>
-                </ul>
+                    <li data-name="action1">Action 1</li>
+                    <li data-name="action2">Action 2</li>
+                    <li data-name="action3">Action 3</li>
+                    <li data-name="action4">Action 4</li>
+                    <li data-name="action5">Action 5</li>
+                    <li data-name="action6">Action 6</li>
+                    <li data-name="action7">Action 7</li>
+                    <li data-name="action8">Action 8</li>
+                    <li data-name="action9">Action 9</li>
+                    <li data-name="action10">Action 10</li>
+                    <li data-name="action11">Action 11</li>
+                    <li data-name="action12">Action 12</li>
+                    <li data-name="action13">Action 13</li>
+                    <li data-name="action14">Action 14</li>
+                    <li data-name="action15">Action 15</li>
+               </ul>
             </div>
         </section>
 
@@ -57,7 +121,7 @@
         // add load events
         if (navigator.userAgent.match(/BB10/)) {
             window.addEventListener('load', function(e) {
-                document.addEventListener('webworksready', app.init);
+                document.addEventListener('webworksready', app.init); // BB10
             }, false);
         }
         else {

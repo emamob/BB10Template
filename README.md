@@ -1,4 +1,4 @@
 BB10Template
 ============
 
-BB10 Template
+This is a template for BB10 WebWorks apps.

@@ -3,13 +3,10 @@
 /* ===========================================================================
  * api.js
  *
- * @description
- *
- *
- * @author Jim Ing (jing@rim.com)
+ * Jim Ing (@jim_ing)
  * ===========================================================================
  *
- * Copyright 2011-2012 Research In Motion Limited.
+ * Copyright 2012-2013 Research In Motion Limited.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
