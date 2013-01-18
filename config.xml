@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" xml:lang="en"
-    id="BB10Template" version="1.0.14">
+    id="BB10Template" version="1.0.21">
 
     <name>BB10 Template</name>
 

@@ -43,7 +43,7 @@ app.init = function (lang) {
         this.lang = lang || 'en';
 
         // Initialize API
-        api.init();
+        // api.init();
 
         // Access properties and initialize events in WebWorks
         if (window.blackberry && blackberry.app) {
@@ -69,7 +69,7 @@ app.init = function (lang) {
 
         // Add event delegation for all Application Menu items
         appMenu.addEventListener('click', function (ev) {
-            console.log(ev.target.dataset.name, ev.target.innerText);
+            console.log(ev.target.dataset.id, ev.target.innerText);
             app.update(ev.target.innerText);
             this.style.display = 'none';
         }, false);
@@ -78,14 +78,34 @@ app.init = function (lang) {
         actionSidebar.addEventListener('click', function (ev) {
             ev.stopPropagation();
             document.getElementById('sidebarMenu').style.display = 'block';
-            document.getElementById('main').style.left = '75%';
+            // Push content to the right
+            if (window.orientation === 0) {
+                document.getElementById('main').style.left = '75%';
+            }
+            else {
+                document.getElementById('main').style.left = '45%';
+            }
         }, false);
 
         // Add event delegation for all Sidebar Menu items
         sidebarMenu.addEventListener('click', function (ev) {
-            console.log(ev.target.dataset.name, ev.target.innerText);
+            //console.log(ev, ev.target.dataset.id, ev.target.innerText, sidebarMenu.children[0].children);
             app.update(ev.target.innerText);
 
+            // Get list of tab IDs and hide all tabs
+            var listId, tabElem;
+            for (var i = 0, ii = sidebarMenu.children[0].children.length; i < ii; i++) {
+                listItemId = sidebarMenu.children[0].children[i].dataset.id;
+                //console.log(listItemId, document.getElementById(listItemId));
+                if (document.getElementById(listItemId)) {
+                    document.getElementById(listItemId).style.display = 'none';
+                }
+            }
+
+            // Show selected tab
+            document.getElementById(ev.target.dataset.id).style.display = 'block';
+
+            // Hide Sidebar Menu
             this.style.display = 'none';
             document.getElementById('main').style.left = '0';
         }, false);
@@ -93,7 +113,7 @@ app.init = function (lang) {
         // Add event delegation for all Action buttons
         actionButtons.addEventListener('click', function (ev) {
             ev.stopPropagation();
-            console.log(ev.target.dataset.name, ev.target.innerText);
+            console.log(ev.target.dataset.id, ev.target.innerText);
             app.update(ev.target.innerText);
         }, false);
 
@@ -105,7 +125,7 @@ app.init = function (lang) {
 
         // Add event delegation for all Action Menu items
         actionMenu.addEventListener('click', function (ev) {
-            console.log(ev.target.dataset.name, ev.target.innerText);
+            console.log(ev.target.dataset.id, ev.target.innerText);
             app.update(ev.target.innerText);
 
             this.style.display = 'none';
@@ -148,5 +168,5 @@ app.toggle = function () {
 app.update = function (text) {
     var heading = document.getElementById('heading');
 
-    heading.innerHTML = 'You clicked <span style="color: red">' + text + '</span>';
+    heading.innerHTML = 'You clicked <span style="color: #C21E38">' + text + '</span>';
 };
