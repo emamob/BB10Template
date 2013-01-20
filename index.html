@@ -174,7 +174,7 @@
         <script src="js/app.js"></script>
         <script type="text/javascript">
         // add load events
-        if (navigator.userAgent.match(/BB10/)) {
+        if (window.blackberry && navigator.userAgent.match(/BB10/)) {
             window.addEventListener('load', function(e) {
                 document.addEventListener('webworksready', app.init); // BB10
             }, false);

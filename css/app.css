@@ -47,7 +47,9 @@ img {
 }
 
 .content {
-    height: -webkit-calc(100% - 18mm);
+    top: 0;
+    height: 89%; /* TODO */
+    /*height: -webkit-calc(100% - 18mm);*/
     overflow-y: scroll;
     padding-left: 10px;
     padding-right: 10px;
@@ -118,9 +120,10 @@ img {
     position: absolute;
     bottom: 0;
     left: 18mm;
+    right: 18mm;
     overflow-x: auto;
     overflow-y: hidden;
-    max-width: -webkit-calc(100% - 18mm - 18mm);
+    /*max-width: -webkit-calc(100% - 18mm - 18mm);*/
     max-height: 71px; /* hack */
 }
 
@@ -291,5 +294,9 @@ img {
 @media (min-height: 720px) and (max-height: 768px) {
     body {
         font-size: 160%;
+    }
+
+    .content {
+        height: -webkit-calc(100% - 18mm);
     }
 }
