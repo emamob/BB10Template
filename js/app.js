@@ -46,17 +46,19 @@ app.init = function (lang) {
         // api.init();
 
         // Access properties and initialize events in WebWorks
-        if (window.blackberry && blackberry.app) {
-            this.name = blackberry.app.name;
-            this.version = blackberry.app.version;
-
-            document.getElementById('heading').innerHTML = this.name + ' ' + this.version;
-
+        if (window.blackberry) {
+            if (document.getElementById('heading') && blackberry.app) {
+                this.name = blackberry.app.name;
+                this.version = blackberry.app.version;
+                document.getElementById('heading').innerHTML = this.name + ' ' + this.version;
+            }
             // Add bezel swipe down event
             if (blackberry.app && blackberry.app.event && blackberry.app.event.onSwipeDown) {
                 blackberry.app.event.onSwipeDown(app.toggle); // PlayBook
             }
-            blackberry.event.addEventListener("swipedown", app.toggle); // BB10
+            else if (blackberry.event && blackberry.event.addEventListener) {
+                blackberry.event.addEventListener("swipedown", app.toggle); // BB10
+            }
         }
 
         // Add click listeners

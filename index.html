@@ -174,13 +174,13 @@
         <script src="js/app.js"></script>
         <script type="text/javascript">
         // add load events
-        if (window.blackberry && navigator.userAgent.match(/BB10/)) {
-            window.addEventListener('load', function(e) {
+        if (navigator.userAgent.match(/WebWorks/)) {
+            window.addEventListener('DOMContentLoaded', function(e) {
                 document.addEventListener('webworksready', app.init); // BB10
             }, false);
         }
         else {
-            window.addEventListener('load', app.init);
+            window.addEventListener('DOMContentLoaded', app.init);
         }
         </script>
     </body>
